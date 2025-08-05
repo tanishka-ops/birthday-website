@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      overflow-x: hidden;
+    }
+    .page {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .active {
+      display: flex;
+    }
+    .heart {
+      font-size: 4rem;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      background-color: #ff9aa2;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .letter {
+      background: #f4f4f4;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 3px dashed #a3c4f3;
+      margin: 1rem;
+      position: relative;
+      font-size: 1.1rem;
+      max-width: 600px;
+    }
+    .flowers {
+      position: absolute;
+      width: 50px;
+    }
+    .bouquet {
+      font-size: 3rem;
+      margin: 2rem 0;
+    }
+    .wink {
+      font-size: 1.2rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>  <div class="page active" id="page1" style="background-color: white; background-image: url('https://i.imgur.com/O4bxyMu.png'); background-size: cover;">
+    <div class="heart">💗</div>
+    <h2>Is it your Birthday babyboy?</h2>
+    <button onclick="goToPage(2)">Yes</button>
+    <button onclick="goToPage(2)">Yes</button>
+  </div>  <div class="page" id="page2" style="background-color: #dff6ff;">
+    <div class="letter">
+      <img src="https://i.imgur.com/E8GH4lK.png" class="flowers" style="top: -25px; left: -25px;">
+      <img src="https://i.imgur.com/E8GH4lK.png" class="flowers" style="bottom: -25px; right: -25px; transform: rotate(180deg);">
+      <p>Happy 19th my love, I wish I could hug you right now. I wish I could hand you flowers, hold your face, and tell you how deeply I love you. But for now, this space is all I have - built only for you. So scroll slowly, love. This is my heart laid out for you.</p>
+    </div>
+    <button onclick="goToPage(3)">Mind clicking? I know I can't do much but I hope it make u feel things</button>
+  </div>  <div class="page" id="page3" style="background-color: #fcf4e6;">
+    <div class="letter" style="background-image: url('https://i.imgur.com/yBzzfhC.jpg'); background-size: cover; color: #2e1c1c;">
+      <p>It's your birthday, but the truth is, you're the gift. To this world. To me. You don't realize how many moments you've unknowingly made better - just by being you. I've never met a soul so tender, a heart so steady. I'll never stop being proud to say - 'He's mine' you're mine and will be forever mine.</p>
+    </div>
+    <button onclick="goToPage(4)">💌</button>
+  </div>  <div class="page" id="page4" style="background-color: #fef1f6;">
+    <div class="letter">
+      <p>This birthday, I promise - I'll love you with more patience, laugh with you more loudly, and fight less like a grumpy cat. I promise to be there when you're winning, and especially when you're tired of the world. We're building something rare, something real. And I'm all in.</p>
+    </div>
+    <button onclick="goToPage(5)">🌸</button>
+  </div>  <div class="page" id="page5" style="background-color: #fff0f5;">
+    <div class="bouquet">💐🌷🌸🌼🌹🌻🌺💐</div>
+    <button onclick="goToPage(6)">Did u smiled. Even a bit? If yes, scroll one more time and I swearrr this is last</button>
+  </div>  <div class="page" id="page6" style="background-color: #e6f7ff;">
+    <div class="letter">
+      <p>Wherever you are right now, reading this - maybe your phone screen's dim, maybe the train's loud - but I hope you smile a little. I hope your heart softens just for a second. Because this message was written with all the love I could gather ight. Happy Birthday, jaan.</p>
+      <br><br>
+      <p class="wink">😉 trust me boyfriend there's more to go...maybe a real bouquet and a customised cake all for my babydino hehe</p>
+    </div>
+  </div>  <script>
+    function goToPage(num) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(`page${num}`).classList.add('active');
+    }
+  </script></body>
+</html>
